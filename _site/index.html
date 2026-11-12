@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="falak">
-<meta name="dcterms.date" content="2026-10-22">
+<meta name="dcterms.date" content="2026-11-12">
 <meta name="keywords" content="chi2, reproducible, Quarto, Python, DSHB">
 
 <title>A Five Sentence Term Paper using Chi2 Analysis</title>
@@ -157,6 +157,10 @@ div.csl-indent {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./corr-demo.html"> 
+<span class="menu-text">Correlation Demo</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
@@ -216,7 +220,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 22, 2026</p>
+      <p class="date">November 12, 2026</p>
     </div>
   </div>
   
@@ -250,7 +254,7 @@ div.csl-indent {
 </section>
 <section id="method" class="level1">
 <h1>Method</h1>
-<div id="daa67db6" class="cell" data-execution_count="1">
+<div id="ccb73c2e" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -271,7 +275,7 @@ div.csl-indent {
 </section>
 <section id="results" class="level1">
 <h1>Results</h1>
-<div id="1515ea79" class="cell" data-execution_count="2">
+<div id="3c39a9a1" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Conduct he chi2 with chi2_contingency by passing the observed</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>x2, pval, degf, _  <span class="op">=</span> chi2_contingency (</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  pd.crosstab(</span>
