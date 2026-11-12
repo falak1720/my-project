@@ -7,6 +7,8 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: corr-demo.qmd
+        text: Correlation Demo
       - about.qmd
 
 format:
