@@ -1,0 +1,154 @@
+# =========================================================
+# Quarto
+# =========================================================
+/.quarto/
+/_site/
+**/*.quarto_ipynb
+*_files/
+*.knit.md
+*.utf8.md
+site_libs/
+# _freeze/ stores computed results so pages don't re-run code.
+# It's usually COMMITTED on purpose (especially if you publish
+# via GitHub Actions or CI). Uncomment the next line only if you
+# render locally and don't want to track it.
+# /_freeze/
+
+# =========================================================
+# Python
+# =========================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+__pypackages__/
+
+# Test, type-check and lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+
+# =========================================================
+# Jupyter Notebook / JupyterLab
+# =========================================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+.jupyter/
+.virtual_documents/
+profile_default/
+ipython_config.py
+
+# =========================================================
+# R / RStudio
+# =========================================================
+.Rhistory
+.Rapp.history
+.RData
+.RDataTmp
+.Ruserdata
+.Rproj.user/
+*-Ex.R
+*.Rcheck/
+rsconnect/
+# renv: library and caches (renv.lock and renv/activate.R stay tracked)
+renv/library/
+renv/local/
+renv/cellar/
+renv/lock/
+renv/python/
+renv/sandbox/
+renv/staging/
+
+# =========================================================
+# Secrets & local environment config
+# =========================================================
+.env
+.env.*
+!.env.example
+.Renviron
+.Rprofile.local
+
+# =========================================================
+# IDEs & editors
+# =========================================================
+# VS Code / Positron (comment out if you share settings)
+.vscode/
+.positron/
+*.code-workspace
+# JetBrains (PyCharm, DataSpell)
+.idea/
+# Spyder
+.spyderproject
+.spyproject
+# Vim / Emacs / misc
+*.swp
+*.swo
+*~
+\#*\#
+.\#*
+*.bak
+*.tmp
+
+# =========================================================
+# macOS
+# =========================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+Icon?
+
+# =========================================================
+# Windows
+# =========================================================
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.stackdump
+*.lnk
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# =========================================================
+# Logs
+# =========================================================
+*.log
+logs/
+.quarto/

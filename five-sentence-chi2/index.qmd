@@ -1,0 +1,112 @@
+---
+title: "A Five Sentence Term Paper using Chi2 Analysis"
+date: "today"
+author:
+  - name: falak
+    id: jc
+    orcid: 0000-0002-1825-0097
+    email: falak@wisc.edu
+    affiliation: 
+      - name: University of Wisconsin Madison
+        city: Madison
+        state: WI
+        url: www.uwmadison.edu
+
+execute:
+   echo: true
+
+project:
+  type: website
+
+website:
+  title: "today"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+abstract: > 
+  Using dataset fictional books dataset (https://raw.githubusercontent.com/adamrossnelson/confident/refs/heads/main/data/confident_fictional_books.csv)
+  RQ: Does the color of the book predict the book's genre?
+keywords:
+  - chi2
+  - reproducible
+  - Quarto
+  - Python
+  - DSHB
+bibliography: references.bib
+
+license: "CC BY"
+copyright: 
+  holder: falak
+  year: 2004
+
+---
+
+# Introduction
+The University of Wisconsin-Madison book club is curious whether cover color can reliably distinguish one genre from another. The club asked students in Data Science in Human Behavior to investigate.
+
+# Literacture Review
+Several earlier studies have applied machine learning to predict book characteristics from one observable input, which provides a foundation for the present analysis.  [@vayadande2024book]
+
+# Method
+```{python}
+import pandas as pd
+import numpy as np
+import seaborn as sns
+
+from scipy import stats
+from scipy.stats import chi2_contingency
+
+domain = 'https://raw.githubusercontent.com/'
+path = 'adamrossnelson/confident/refs/heads/main/data/'
+file = 'confident_fictional_books.csv'
+
+books = pd.read_csv(domain + path + file)
+```
+
+
+Our null hypothesis is that book cover color does not predict the book's genre while the alternate hypothesis is that book cover color does 
+predict the book's genre and we study this question with data from `{python} f"{books.shape[0]}"` books where we know the book's genre and 
+the book's cover color such that we can conduct a chi2 test to see if these two varaibles are either independent or dependent 
+
+(as it turns out our chi2 test will involve a
+
+` {python} f"{books['book_genre'].nunique()}" ` x
+
+` {python} f"{books['book_color'].nunique()}" ` test ) 
+
+# Results
+```{python}
+#Conduct he chi2 with chi2_contingency by passing the observed
+x2, pval, degf, _  = chi2_contingency (
+  pd.crosstab(
+    books['book_genre'],
+    books['book_color']
+  )
+)
+```
+
+Chi2 Stat: `{python} f"{x2: .3f}"` 
+
+Pvalue: `{python} f"{pval: .3f}"` 
+
+Degrees of Freedom: `{python} f"{degf}"`
+
+With a chi-square statistic of 1.992 on 25 degrees of freedom and a p-value of 1.000, we fail to reject the null hypothesis, so there is no evidence that book cover color is associated with a book's genre.
+
+# Discussion
+Our results suggest that cover color alone is not a useful way to separate books by genre, so the book club would be better off relying on other features such as title, description, or cover imagery.
+
+"It is a sad day for the UW-Madison book club members, the DSHB students thought they could deliver a BIG WIN for the book club members and book addicionados world-wide; the search for a reproducible method that will predict book genre carries on!"
+
+# References
+:::{#refs}
+:::
